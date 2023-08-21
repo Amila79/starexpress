@@ -1,8 +1,12 @@
-class Module {
-    constructor(app) {
+class Module 
+{
+    constructor(app) 
+    {
        this.app = app;
     }
-   init() {
+   
+    init() 
+   {
     const productcontroller = require('./product/product.controller');
     new productcontroller(this.app);
 
@@ -12,8 +16,11 @@ class Module {
     const stylemastercontroller = require('./stylemaster/stylemaster.controller');
     new stylemastercontroller(this.app);
 
+    const simstylescontroller = require('./simstyles/simstylesController');
+    new simstylescontroller(this.app);
+
    }
-  }
+}
   
 
  module.exports = Module
